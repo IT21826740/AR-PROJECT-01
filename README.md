@@ -1,111 +1,97 @@
 
-```markdown
-# 🧠 AR-PROJECT-01 - Augmented Reality with Marker Detection
 
-This is a basic web-based Augmented Reality (AR) project built using **AR.js** and **A-Frame**, designed to display a 3D object (box) when a marker is detected using the device's camera.
+# AR-PROJECT-01
 
----
+**AR-PROJECT-01** is a lightweight browser-based Augmented Reality (AR) web application that overlays 3D models on real-world markers using your device's camera. Built using **AR.js** and **A-Frame**, it enables seamless marker-based AR experiences directly from the browser without the need for any native app installation.
 
-## 🚀 Features
+## 🌟 Features
 
-- Marker-based AR using `ar.js` and A-Frame.
-- Web-based: Works directly in mobile or desktop browser.
-- Local HTTPS server with camera access.
-- Compatible with printed or digital marker (HIRO).
+* 🎯 Marker-based AR using HIRO marker
+* 📱 Works across mobile and desktop browsers
+* 🚀 Lightweight and fast performance (WebXR & WebGL)
+* 🔒 HTTPS-ready local development for camera access
+* 📦 Easy to host and extend with new 3D models
 
----
+## 🔧 Technologies Used
 
-## 📁 Folder Structure
+### Frontend
+
+* HTML, CSS, JavaScript
+* A-Frame (WebVR/AR Framework)
+* AR.js (Marker-based AR Engine)
+
+### Others
+
+* `ws` - Lightweight HTTPS server for local AR testing
+* HIRO marker (Default AR marker provided by AR.js)
+
+## 📁 Project Structure
 
 ```
-
 AR-PROJECT-01/
 │
-├── index.html          # Main AR webpage
-├── assets/             # Folder for models, images, or audio (optional)
-└── README.md           # Project documentation
-
-````
-
----
-
-## 🛠️ Prerequisites
-
-- [Node.js](https://nodejs.org/)
-- [ws](https://www.npmjs.com/package/ws) (simple HTTPS server for local use)
-- Modern browser (Chrome, Firefox) with WebXR support
-- Camera-enabled mobile phone or webcam
+├── index.html          # Main AR scene with marker tracking
+├── assets/             # Folder for 3D models or images (if used)
+└── README.txt          # Project documentation
+```
 
 ---
 
-## 🧪 How to Run the Project Locally
+## 🛠️ Steps to Run the Project
 
-### 1. Clone the Repository
+1️⃣ **Install Node.js**
 
-```bash
-git clone https://github.com/IT21826740/AR-PROJECT-01.git
-cd AR-PROJECT-01
-````
+Download and install Node.js from:
+[https://nodejs.org](https://nodejs.org)
 
-### 2. Install `ws`
+2️⃣ **Install the HTTPS Web Server (`ws`)**
 
 ```bash
 npm install -g ws
 ```
 
-### 3. Run the Project with HTTPS
+3️⃣ **Clone the Repository**
+
+```bash
+git clone https://github.com/IT21826740/AR-PROJECT-01.git
+cd AR-PROJECT-01
+```
+
+4️⃣ **Start the HTTPS Server**
 
 ```bash
 ws --https
 ```
 
-You will see output like:
+This will start the server and display output like:
 
 ```
-Listening on https://192.168.1.7:8000, https://127.0.0.1:8000, etc.
+Listening on https://127.0.0.1:8000, https://192.168.1.7:8000, ...
 ```
+
+5️⃣ **Access the App on Your Device**
+
+* Use your phone or browser and go to one of the HTTPS URLs (e.g., `https://192.168.1.7:8000`)
+* Accept the SSL warning (self-signed certificate)
+* Allow camera access
+* Point to a printed or digital **HIRO marker** to see the AR model
 
 ---
 
-## 📱 View on Mobile
+## 🖼️ Marker Information
 
-1. Connect your phone to the **same Wi-Fi network** as your PC.
-2. Open the browser on your phone and enter the local IP shown (e.g.):
+Use the default **HIRO marker** for testing:
 
-```
-https://192.168.1.7:8000
-```
+* PNG: [https://raw.githubusercontent.com/AR-js-org/AR.js/master/three.js/examples/marker-training/examples/pattern-files/pattern-hiro.png](https://raw.githubusercontent.com/AR-js-org/AR.js/master/three.js/examples/marker-training/examples/pattern-files/pattern-hiro.png)
+* PDF: [https://chev.me/arjs-marker-training/examples/pattern-files/hiro.pdf](https://chev.me/arjs-marker-training/examples/pattern-files/hiro.pdf)
 
-3. Accept the **security warning** (your certificate is self-signed).
-4. Allow **camera access**.
-5. Point your camera at the **HIRO marker** (see below).
+Print it or show it on another screen.
 
 ---
 
-## 🎯 Marker: HIRO
+## 📬 Feedback & Contributions
 
-Use the default AR.js marker called **HIRO**.
-
-* View it here: [HIRO Marker PNG](https://raw.githubusercontent.com/AR-js-org/AR.js/master/three.js/examples/marker-training/examples/pattern-files/pattern-hiro.png)
-* Or download the [Printable PDF version](https://chev.me/arjs-marker-training/examples/pattern-files/hiro.pdf)
-
-You can:
-
-* Print it.
-* Or open it on another device screen.
+Feel free to fork the repo, report issues, or contribute with pull requests.
+Ideas for extending the project with animated models, multi-marker support, or voice controls are welcome!
 
 ---
-
-## 📄 License
-
-MIT License
-
----
-
-## ✨ Credits
-
-* Built using [A-Frame](https://aframe.io/)
-* Powered by [AR.js](https://github.com/AR-js-org/AR.js)
-
-```
-
