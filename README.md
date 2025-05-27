@@ -95,3 +95,5 @@ Feel free to fork the repo, report issues, or contribute with pull requests.
 Ideas for extending the project with animated models, multi-marker support, or voice controls are welcome!
 
 ---
+
+SLIIT 4YR 1SEM MTIT 
